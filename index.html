@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naija Life — Hustle & Survive</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="app-shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Life Sim</p>
-          <h1>Naija Life — Hustle & Survive</h1>
-        </div>
-        <div class="day-chip">
-          <span>Day</span>
-          <strong id="dayValue">1</strong>
-        </div>
-      </header>
-
-      <main class="game-layout">
-        <aside class="panel stats-panel">
-          <h2>Life Stats</h2>
-          <div class="stat-row">
-            <span>Cash</span>
-            <strong id="cashValue">₦ 250</strong>
-          </div>
-          <div class="stat-row">
-            <span>Hunger</span>
-            <strong id="hungerValue">75%</strong>
-          </div>
-          <div class="stat-row">
-            <span>Energy</span>
-            <strong id="energyValue">80%</strong>
-          </div>
-          <div class="stat-row">
-            <span>Mood</span>
-            <strong id="moodValue">68%</strong>
-          </div>
-          <div class="stat-row">
-            <span>Health</span>
-            <strong id="healthValue">82%</strong>
-          </div>
-          <div class="stat-row">
-            <span>Time</span>
-            <strong id="timeValue">8:00 AM</strong>
-          </div>
-
-          <div class="goal-box">
-            <p class="goal-label">Goal</p>
-            <p>Reach <strong>₦ 3,000</strong> and stay alive.</p>
-          </div>
-        </aside>
-
-        <section class="panel play-panel">
-          <div class="scene">
-            <div class="scene-card">
-              <p class="scene-label">Current Situation</p>
-              <h3 id="sceneTitle">Early morning hustle</h3>
-              <p id="sceneText">
-                You wake up in your room with a tight budget and a long day ahead.
-              </p>
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Life Sim</p>
+                <h1>Naija Life — Hustle & Survive</h1>
             </div>
-          </div>
+            <div class="day-chip">
+                <span>Day</span>
+                <strong id="dayValue">1</strong>
+            </div>
+        </header>
 
-          <div class="actions-grid">
-            <button class="action-btn" data-action="work">Work</button>
-            <button class="action-btn" data-action="hustle">Hustle</button>
-            <button class="action-btn" data-action="eat">Eat</button>
-            <button class="action-btn" data-action="rest">Rest</button>
-            <button class="action-btn" data-action="study">Study</button>
-            <button class="action-btn" data-action="exercise">Exercise</button>
-          </div>
-        </section>
+        <main class="game-layout">
+            <aside class="panel stats-panel">
+                <h2>Life Stats</h2>
+                <div class="stat-row">
+                    <span>Cash</span>
+                    <strong id="cashValue">₦ 250</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Hunger</span>
+                    <strong id="hungerValue">75%</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Energy</span>
+                    <strong id="energyValue">80%</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Mood</span>
+                    <strong id="moodValue">68%</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Health</span>
+                    <strong id="healthValue">82%</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Time</span>
+                    <strong id="timeValue">8:00 AM</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Reputation</span>
+                    <strong id="reputationValue">0⭐</strong>
+                </div>
 
-        <aside class="panel sidebar-panel">
-          <h2>Log</h2>
-          <ul id="logList" class="log-list"></ul>
-        </aside>
-      </main>
+                <div class="goal-box">
+                    <p class="goal-label">Goal</p>
+                    <p>Reach <strong>₦ 3,000</strong> and stay alive.</p>
+                </div>
+            </aside>
+
+            <section class="panel play-panel">
+                <div class="scene">
+                    <div class="scene-card">
+                        <p class="scene-label">Current Situation</p>
+                        <h3 id="sceneTitle">Early morning hustle</h3>
+                        <p id="sceneText">
+                            You wake up in your room with a tight budget and a long day ahead.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="location-section">
+                    <h3 id="locationName">Home</h3>
+                    <p id="locationDesc">Your small room - a place to rest and think.</p>
+                </div>
+
+                <div class="actions-grid">
+                    <button class="action-btn" data-action="work">💼 Work</button>
+                    <button class="action-btn" data-action="hustle">🚀 Hustle</button>
+                    <button class="action-btn" data-action="eat">🍜 Eat</button>
+                    <button class="action-btn" data-action="rest">😴 Rest</button>
+                    <button class="action-btn" data-action="study">📚 Study</button>
+                    <button class="action-btn" data-action="exercise">💪 Exercise</button>
+                    <button class="action-btn" data-action="visit-market">🏪 Market</button>
+                    <button class="action-btn" data-action="network">👥 Network</button>
+                    <button class="action-btn" data-action="gamble">🎲 Gamble</button>
+                </div>
+            </section>
+
+            <aside class="panel sidebar-panel">
+                <h2>Log</h2>
+                <button id="resetBtn" class="reset-btn">🔄 Reset Game</button>
+                <ul id="logList" class="log-list"></ul>
+            </aside>
+        </main>
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
